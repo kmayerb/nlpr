@@ -13,16 +13,32 @@ docker pull quay.io/kmayerb/nlpr:0.0.3
 docker run -it quay.io/kmayerb/nlpr:0.0.3
 git clone https://github.com/kmayerb/nlpr.git
 cd /nlpr/nlpr
-python nl_control_file_pks.py
+python nl_control_file_example.py
 ``` 
 
+## Suggested Primers
 
+After the program runs, you can see example outputs in `nlpr/nlpr/example` folder.
+
+
+## Inputs
+
+For new runs three input files are requred formatted like the fils in the `nlpr/inputs` folder.
+
+1. Nuleic Acids fasta `*fna`
+2. Protein fasta  `*.faa`
+3. Tabular results of an all_v_all blastp or blastn `.all-v-all_blastp_output`
+
+
+## Configuration
+
+Primer design can be configured in `nl_control_file_.py'
 
 
 ## Dockerfile
 
 ```bash
-FFROM ubuntu:18.04
+FROM ubuntu:18.04
 
 MAINTAINER kmayerbl@fredhutch.org
 
@@ -68,23 +84,9 @@ RUN pip install Biopython
 WORKDIR /
 ```
 
-
-
-
-
-## Additional Notes
-
-
-### try running help commands as a basic install test
-```bash
-/software/silix-1.2.6/src/silix -h && \
-/usr/bin/fuzznuc -h && \
-/usr/bin/cd-hit -h && \
-/usr/bin/primer3_core -h 
-````
-
 ### Archive of legacy versions of software used 
-```
+
+
 [cd-hit-v4.5.4-2011-03-07.tgz](https://www.dropbox.com/s/34ybl944fkcefds/cd-hit-v4.5.4-2011-03-07.tgz?dl=1)
 
 [primer3-2.3.4.tar.gz](https://www.dropbox.com/s/z7x7tx1cmvwvl9h/primer3-2.3.4.tar.gz?dl=1)
@@ -92,5 +94,3 @@ WORKDIR /
 [ncbi-blast-2.2.18-universal-macosx.tar.gz](https://www.dropbox.com/s/y2jeajmxgcho0bt/ncbi-blast-2.2.18%2B-universal-macosx.tar.gz?dl=1)
 
 [silix-1.2.6.tar.gz](https://www.dropbox.com/s/rlctg1chfxqr13c/silix-1.2.6.tar.gz?dl=1)
-
-```
