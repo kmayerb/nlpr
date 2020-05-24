@@ -34,10 +34,4 @@ RUN apt-get -y install cd-hit
 # install ps and text editor helpful for interactive use and AWS batch
 RUN apt-get install -y procps && apt-get install -y nano
 
-# try running help commands as a basic install test
-RUN /software/silix-1.2.6/src/silix -h && \
-	/usr/bin/fuzznuc -h && \
-	/usr/bin/cd-hit -h && \
-	/usr/bin/primer3_core -h 
-
 WORKDIR /
