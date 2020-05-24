@@ -9,8 +9,8 @@
 2. With Docker Desktop running, from the command line:
 
 ```bash
-docker pull quay.io/kmayerb/nlpr:0.0.2
-docker run -it quay.io/kmayerb/nlpr:0.0.2
+docker pull quay.io/kmayerb/nlpr:0.0.3
+docker run -it quay.io/kmayerb/nlpr:0.0.3
 ``` 
 
 
