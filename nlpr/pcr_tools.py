@@ -1,7 +1,9 @@
 #pcr_tools.py
+
 # THIS PROGRAM WAS ORIGINALLY WRITTEN BY kmb* sept 20, 2012
 # BUT THE FILEPATHS WERE UPDATED TO RUN ON MY MACHINE (JGrembi) ON  29 July 2014
 primer3_path = '/usr/bin/' #/usr/bin/primer3_core
+fuzznuc_path = '/usr/bin/'
 
 def hello_pcr_tools():
 	print "## \nYou are using a version pcr_tools.py last updated on Sept 20, 2012 \n##"
@@ -309,7 +311,8 @@ def execute_fuznuc(pattern_file,target_seqs, Out):
 	#NOTE: ENSURE THE FOLLOWING IS INSTALLED in ~/EMBOSS-6.4.0/emboss/fuzznuc
 	#NOTE: http://emboss.sourceforge.net/docs/themes/ReportFormats.html
 	import os
-	os.system('~/EMBOSS-6.5.7/emboss/fuzznuc %s %s -pattern @%s -complement Y -rformat excel'%(target_seqs, Out, pattern_file))
+	os.system(fuzznuc_path + 'fuzznuc %s %s -pattern @%s -complement Y -rformat excel'%(target_seqs, Out, pattern_file))
+    #os.system('~/EMBOSS-6.5.7/emboss/fuzznuc %s %s -pattern @%s -complement Y -rformat excel'%(target_seqs, Out, pattern_file))
 	#print "## \nFrom %s and %s You generated a fuznuc output file: %s\n##"%(target_seqs, pattern_file,Out)
 	#EXAMPLE:
 	#os.system('/Users/koshlan/EMBOSS-6.4.0/emboss/fuzznuc fuzzIn.fasta fuzzOut.pat -pattern @oligo_nucseq.pat -complement Y')
