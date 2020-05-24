@@ -122,8 +122,8 @@ if generate_primers_for_A_class == True:
 	sub_file_by_grade_x(run_name,grade) # run_name.sub_networks => run_name.sub_networks.temp
 	fn_subnetwork_file = run_name + '.sub_networks.temp'
 	
-    if not os.path.isdir(run_name):
-	    os.system('mkdir %s' %(run_name))
+	if not os.path.isdir(run_name):
+		os.system('mkdir %s' %(run_name))
 	final_output_path = './%s/'%(run_name)
 	from nL_network_tools import nL_PRIME_A
 	
@@ -134,8 +134,8 @@ if generate_primers_for_B_class == True:
 	grade = 'B'
 	sub_file_by_grade_x(run_name,grade) # run_name.sub_networks => run_name.sub_networks.temp
 	fn_subnetwork_file = run_name + '.sub_networks.temp'
-    if not os.path.isdir(run_name):
-	    os.system('mkdir %s' %(run_name))
+	if not os.path.isdir(run_name):
+		os.system('mkdir %s' %(run_name))
 	final_output_path = './%s/'%(run_name)
 	from nL_network_tools import nL_PRIME_B
 	grade = 'B'
