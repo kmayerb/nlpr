@@ -32,6 +32,7 @@ RUN apt-get -y install emboss
 RUN apt-get -y install cd-hit
 
 # install ps and text editor helpful for interactive use and AWS batch
-RUN apt-get install -y procps && apt-get install -y nano
+RUN apt-get -y install procps && apt-get -y install nano
+RUN apt-get -y install git
 
 WORKDIR /
