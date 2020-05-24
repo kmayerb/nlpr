@@ -124,8 +124,8 @@ def fna_to_pr3_v2_3_4_input(In, Out, number_of_primers_to_generate):
 	output_handle.write('PRIMER_SALT_DIVALENT=3\n')
 	output_handle.write('PRIMER_DNTP_CONC=0.6\n')
 	output_handle.write('PRIMER_LIB_AMBIGUITY_CODES_CONSENSUS=0\n')
-    output_handle.write('PRIMER_THERMODYNAMIC_PARAMETERS_PATH=' + primer3_path + 'primer3_config/\n')
-    # output_handle.write('PRIMER_THERMODYNAMIC_PARAMETERS_PATH=/Users/koshlan/primer3-2.3.4/src/primer3_config/\n') #!UPDATE ME!#
+	output_handle.write('PRIMER_THERMODYNAMIC_PARAMETERS_PATH=' + primer3_path + 'primer3_config/\n')
+	# output_handle.write('PRIMER_THERMODYNAMIC_PARAMETERS_PATH=/Users/koshlan/primer3-2.3.4/src/primer3_config/\n') #!UPDATE ME!#
 	#output_handle.write('PRIMER_THERMODYNAMIC_PARAMETERS_PATH=/Users/JGrembi/primer3-2.3.4/src/primer3_config/\n')
 	#This block writes the sequences in sys.argv[1] to the primer3input file
 	
@@ -154,8 +154,8 @@ def write_check_p3(p1,p2,Out):
 	oh.write("PRIMER_DNTP_CONC=0.6\n")
 	oh.write("PRIMER_LIB_AMBIGUITY_CODES_CONSENSUS=0\n")
 	oh.write("PRIMER_THERMODYNAMIC_PARAMETERS_PATH=" + primer3_path + "primer3_config/\n")
-    # oh.write("PRIMER_THERMODYNAMIC_PARAMETERS_PATH=/Users/JGrembi/primer3-2.3.4/src/primer3_config/\n")#!UPDATE ME!#
-    # oh.write("PRIMER_THERMODYNAMIC_PARAMETERS_PATH=/Users/koshlan/primer3-2.3.4/src/primer3_config/\n")
+	# oh.write("PRIMER_THERMODYNAMIC_PARAMETERS_PATH=/Users/JGrembi/primer3-2.3.4/src/primer3_config/\n")#!UPDATE ME!#
+	# oh.write("PRIMER_THERMODYNAMIC_PARAMETERS_PATH=/Users/koshlan/primer3-2.3.4/src/primer3_config/\n")
 	oh.write("=\n")
 
 def pr3_modern(In, Out, pr3_path):
@@ -165,9 +165,9 @@ def pr3_modern(In, Out, pr3_path):
 def pr3(In, Out):
 	import os
 	os.system(primer3_path + "primer3_core <" + In + ">" + Out)
-    #os.system("/Users/JGrembi/primer3-2.3.4/src/primer3_core <" + In + ">" + Out)
-    # os.system("/Users/koshlan/primer3-2.3.4/src/primer3_core <" + In + ">" + Out) #!UPDATE ME!#
-    # JULY 24, 2014 (I MADE THIS CHAGEN SO JESS COULD RUN ON HER MACHINE)#os.system("/Users/koshlan/primer3-2.3.4/src/primer3_core <" + In + ">" + Out)
+	#os.system("/Users/JGrembi/primer3-2.3.4/src/primer3_core <" + In + ">" + Out)
+	# os.system("/Users/koshlan/primer3-2.3.4/src/primer3_core <" + In + ">" + Out) #!UPDATE ME!#
+	# JULY 24, 2014 (I MADE THIS CHAGEN SO JESS COULD RUN ON HER MACHINE)#os.system("/Users/koshlan/primer3-2.3.4/src/primer3_core <" + In + ">" + Out)
 	#os.system("primer3_core <" + In + ">" + Out)
 
 
