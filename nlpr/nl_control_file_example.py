@@ -47,8 +47,14 @@ fn_fna = '/nlpr/nlpr/inputs/PF00699.gp.minimal.nt.gbk.fna.concise'
 	# filename_blast_result
 fn_blastresult = '/nlpr/nlpr/inputs/PF00699.gp.target.faa.minimal.concise.all-v-all_blastp_output'  
 
-	# custom_ranked_accession_list (ARGUEMNT ONLY USED IF: use_custom_ranked_list ==True)
-custom_ranked_accession_list = 	['XP_001265690.1', 'XP_749265.2', 'XP_002381999.1']
+# custom_ranked_accession_list (ARGUEMNT ONLY USED IF: use_custom_ranked_list ==True)
+# The user may provide a custom_ranked list of accession of key proteins to be used as 
+# reference for primer design. For instance a known pathogenic isolate can be used as the 
+# reference sequence so that primer is guaranteed to match that sequence. If 
+# use_custom_ranked_list = False any member of a sequence cluster may be used 
+# as the primary reference. 
+custom_ranked_accession_list = 	['AAC72748.1']
+
 # Flow Control Arguments 
 	# generate_new_silix_database
 generate_new_silix_database = True
