@@ -37,19 +37,18 @@ utils_path = './utils/'
 temp_path =  './temp/'
 
 # DATA BLOCK 2: GLOBAL VARIABLES AND FILENAMES 
-	# silix_database_name
 silix_database_name =  'example_SILIX' 
 	# primer design run name
 run_name = 'example' 
 	# filename_fasta_amino_acid
-fn_faa ='/nLprime/inputs/PF00699.gp.target.faa.minimal.concise' 
+fn_faa ='/nlpr/nlpr/inputs/PF00699.gp.target.faa.minimal.concise' 
 	# filename_fasta_nucleic_acid
-fn_fna = '/nLprime/inputs/PF00699.gp.minimal.nt.gbk.fna.concise' 
+fn_fna = '/nlpr/nlpr/inputs/PF00699.gp.minimal.nt.gbk.fna.concise' 
 	# filename_blast_result
-fn_blastresult = '/nLprime/inputs/PF00699.gp.target.faa.minimal.concise.all-v-all_blastp_output'  
+fn_blastresult = '/nlpr/nlpr/inputs/PF00699.gp.target.faa.minimal.concise.all-v-all_blastp_output'  
+
 	# custom_ranked_accession_list (ARGUEMNT ONLY USED IF: use_custom_ranked_list ==True)
 custom_ranked_accession_list = 	['XP_001265690.1', 'XP_749265.2', 'XP_002381999.1']
-
 # Flow Control Arguments 
 	# generate_new_silix_database
 generate_new_silix_database = True
@@ -62,7 +61,7 @@ custom_network_input = False
 
 	# Generate Primers: DO YOU WANT TO GENERATE PRIMERS
 generate_primers_for_A_class = True
-generate_primers_for_B_class = False
+generate_primers_for_B_class = True
 generate_primers_for_C_class = False
 generate_primers_for_D_class = False
 generate_primers_for_E_class = False
@@ -123,7 +122,8 @@ if generate_primers_for_A_class == True:
 	sub_file_by_grade_x(run_name,grade) # run_name.sub_networks => run_name.sub_networks.temp
 	fn_subnetwork_file = run_name + '.sub_networks.temp'
 	
-	os.system('mkdir %s' %(run_name))
+	if not os.path.isdir(run_name):
+		os.system('mkdir %s' %(run_name))
 	final_output_path = './%s/'%(run_name)
 	from nL_network_tools import nL_PRIME_A
 	
@@ -134,7 +134,8 @@ if generate_primers_for_B_class == True:
 	grade = 'B'
 	sub_file_by_grade_x(run_name,grade) # run_name.sub_networks => run_name.sub_networks.temp
 	fn_subnetwork_file = run_name + '.sub_networks.temp'
-	os.system('mkdir %s' %(run_name))
+	if not os.path.isdir(run_name):
+		os.system('mkdir %s' %(run_name))
 	final_output_path = './%s/'%(run_name)
 	from nL_network_tools import nL_PRIME_B
 	grade = 'B'
