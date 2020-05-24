@@ -38,7 +38,7 @@ RUN apt-get -y install procps && apt-get -y install nano
 RUN apt-get -y install git
 
 # install Biopython
-RUN apt-get -y intall python-pip
+RUN apt-get -y install python-pip
 RUN pip install Biopython
 
 WORKDIR /
