@@ -42,11 +42,11 @@ silix_database_name =  'pks_v2.1_SILIX'
 	# primer design run name
 run_name = 'pks_v2.1' 
 	# filename_fasta_amino_acid
-fn_faa ='/nLprime/inputs/pks.gp.faa.concise' 
+fn_faa ='/nlpr/nlpr/inputs/pks.gp.faa.concise' 
 	# filename_fasta_nucleic_acid
-fn_fna = '/nLprime/inputs/pks.gp.nt.gbk.fna.concise' 
+fn_fna = '/nlpr/nlpr/inputs/pks.gp.nt.gbk.fna.concise' 
 	# filename_blast_result
-fn_blastresult = '/nLprime/inputs/pks.gp.faa.concise.all-v-all_blastp_output'  
+fn_blastresult = '/nlpr/nlpr/inputs/pks.gp.faa.concise.all-v-all_blastp_output'  
 	# custom_ranked_accession_list (ARGUEMNT ONLY USED IF: use_custom_ranked_list ==True)
 custom_ranked_accession_list = 	['XP_001265690.1', 'XP_749265.2', 'XP_002381999.1']
 # Flow Control Arguments 
