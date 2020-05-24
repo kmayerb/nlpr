@@ -11,6 +11,9 @@
 ```bash
 docker pull quay.io/kmayerb/nlpr:0.0.3
 docker run -it quay.io/kmayerb/nlpr:0.0.3
+git clone https://github.com/kmayerb/nlpr.git
+cd /nlpr/nlpr
+python nl_control_file_pks.py
 ``` 
 
 
