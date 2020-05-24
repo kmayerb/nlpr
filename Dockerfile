@@ -1,9 +1,3 @@
-# nlpr
-
-
-## Dockerfile
-
-```bash
 FROM ubuntu:18.04
 
 MAINTAINER kmayerbl@fredhutch.org
@@ -47,29 +41,3 @@ RUN /software/silix-1.2.6/src/silix -h && \
 	/usr/bin/primer3_core -h 
 
 WORKDIR /
-
-```
-
-
-## Additional Notes
-
-### Paths to help docs
-```bash
-/software/silix-1.2.6/src/silix -h
-/usr/bin/fuzznuc -h
-/usr/bin/cd-hit -h
-/usr/bin/primer3_core -h
-```
-
-
-### Archive of legacy versions of software used 
-```
-[cd-hit-v4.5.4-2011-03-07.tgz](https://www.dropbox.com/s/34ybl944fkcefds/cd-hit-v4.5.4-2011-03-07.tgz?dl=1)
-
-[primer3-2.3.4.tar.gz](https://www.dropbox.com/s/z7x7tx1cmvwvl9h/primer3-2.3.4.tar.gz?dl=1)
-
-[ncbi-blast-2.2.18-universal-macosx.tar.gz](https://www.dropbox.com/s/y2jeajmxgcho0bt/ncbi-blast-2.2.18%2B-universal-macosx.tar.gz?dl=1)
-
-[silix-1.2.6.tar.gz](https://www.dropbox.com/s/rlctg1chfxqr13c/silix-1.2.6.tar.gz?dl=1)
-
-```
