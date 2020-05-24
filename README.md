@@ -19,7 +19,7 @@ docker run -it quay.io/kmayerb/nlpr:0.0.2
 ## Dockerfile
 
 ```bash
-FROM ubuntu:18.04
+FFROM ubuntu:18.04
 
 MAINTAINER kmayerbl@fredhutch.org
 
@@ -54,7 +54,13 @@ RUN apt-get -y install cd-hit
 
 # install ps and text editor helpful for interactive use and AWS batch
 RUN apt-get -y install procps && apt-get -y install nano
+
+# install git tools
 RUN apt-get -y install git
+
+# install Biopython
+RUN apt-get -y intall python-pip
+RUN pip install Biopython
 
 WORKDIR /
 ```
